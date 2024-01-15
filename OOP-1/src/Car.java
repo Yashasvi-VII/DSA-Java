@@ -1,28 +1,35 @@
 public class Car {
-    //instance variables
+
     int noOfWheels;
     String color;
     float maxSpeed;
     float currentFuelInLiters;
     int noOfSeats;
 
-    //instance methods
-    public void drive() {
+  //  public void start() {
+        public Car start() {
         if (currentFuelInLiters == 0) {
-            System.out.println("Car is out of fuel");
-        } else if (currentFuelInLiters<=5){
+            System.out.println("Car is out of fuel, cannot start");
+        } else if (currentFuelInLiters <= 5) {
             System.out.println("Car is in reserved mode, please refuel");
-            currentFuelInLiters--;
-        }else{
-            System.out.println("Car drive");
-            currentFuelInLiters--;
+        } else {
+            System.out.println("Car started!!");
         }
-    }
-    public void addFuel(float fuel){
-        currentFuelInLiters+=fuel;
+
+        //returing car, i.e. current object
+            return this;
     }
 
-    public float getCurrentFuelLevel(){
+    public void drive() {
+        System.out.println("Car drive");
+        currentFuelInLiters--;
+    }
+
+    public void addFuel(float fuel) {
+        currentFuelInLiters += fuel;
+    }
+
+    public float getCurrentFuelLevel() {
         return currentFuelInLiters;
     }
 }
