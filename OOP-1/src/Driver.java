@@ -1,5 +1,15 @@
 // Declaring and using objects
 public class Driver {
+
+    static int minAgeForDriving=18;
+    String name;
+    int age;
+    String dateOfLicence;
+
+    public boolean isAllowedToDrive(){
+        return this.age>=minAgeForDriving;
+    }
+
     public static void main(String[] args) {
 //        Car myCar = new Car();
 //
@@ -21,5 +31,14 @@ public class Driver {
         swift.addFuel(6);
        Car startedCar= swift.start();
         startedCar.drive();
+
+        System.out.println("Min age of driving is "+ Driver.minAgeForDriving);
+        Driver myDriver = new Driver();
+        myDriver.name="yashasvi";
+        myDriver.age=19;
+
+        System.out.println("Is driver legal to drive "+myDriver.isAllowedToDrive());
+
+
     }
 }

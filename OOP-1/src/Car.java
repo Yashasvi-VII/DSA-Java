@@ -25,8 +25,8 @@ public class Car {
         currentFuelInLiters--;
     }
 
-    public void addFuel(float fuel) {
-        currentFuelInLiters += fuel;
+    public void addFuel(float currentFuelInLiters) {
+        this.currentFuelInLiters += currentFuelInLiters;
     }
 
     public float getCurrentFuelLevel() {
