@@ -31,9 +31,25 @@ public class PrintClass {
         students[1] = s2;
         students[2] = s3;
 
-// Print
-        for(int i=0;i<students.length;i++){
-            System.out.println(students[i].name + " " + students[i].rollNo + " "+ students[i].marks);
+        int nums[] = new int[4];
+        nums[0] = 3;
+        nums[1] = 1;
+        nums[2] = 5;
+        nums[3] = 7;
+
+// Loops
+//        for(int i=0;i<students.length;i++){
+//            System.out.println(students[i].name + " " + students[i].rollNo + " "+ students[i].marks);
+//        }
+
+        //For each loop Or Enhanced for loop
+//        for(int n:nums){
+//            System.out.println(n);
+//        }
+
+        for (Student stud : students) {
+            System.out.println(stud.name + " " + stud.rollNo + " " + stud.marks);
         }
+
     }
 }

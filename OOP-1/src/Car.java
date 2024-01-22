@@ -6,10 +6,10 @@ public class Car {
     float currentFuelInLiters;
     int noOfSeats;
 
-  static  int noOfCarsSold;
+    static int noOfCarsSold;
 
-    static{
-        noOfCarsSold=0;
+    static {
+        noOfCarsSold = 0;
         System.out.println("I am in static block");
     }
 
@@ -68,4 +68,5 @@ public class Car {
     public float getCurrentFuelLevel() {
         return currentFuelInLiters;
     }
+
 }

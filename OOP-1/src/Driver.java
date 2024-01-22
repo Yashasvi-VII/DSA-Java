@@ -14,7 +14,6 @@ public class Driver {
 
         Car swift = new Car("White");
         Car thar = new Car();
-
 //        swift.start();
 //        swift.addFuel(6);
 //        Car startedCar = swift.start();
