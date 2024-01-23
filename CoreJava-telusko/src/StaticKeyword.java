@@ -2,7 +2,11 @@ class Mobile {
     //Instance variables
     String brand;
     int price;
-    String name;
+
+    //This is shared by all the objects
+    // Any change in name value will affect
+    // all the objects
+    static String name;
 
     public void show(){
         System.out.println(brand+" "+ price+" " + name);
@@ -21,6 +25,8 @@ public class StaticKeyword {
         obj2.brand = "Samsung";
         obj2.price = 80000;
         obj2.name = "Smartphone";
+
+        obj1.name="Phone";
 
         obj1.show();
         obj2.show();
