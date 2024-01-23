@@ -5,7 +5,7 @@ class Mobile {
 
     //This is shared by all the objects
     // Any change in name value will affect
-    // all the objects
+    // all the objects, it is a class member not object member.
     static String name;
 
     public void show(){
