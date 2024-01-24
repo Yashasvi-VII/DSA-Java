@@ -24,6 +24,13 @@ class Mobile {
     public void show() {
         // we can use static variable name in non-static methods
         System.out.println(brand + " " + price + " " + name);
+    }
+
+    public static void show1(Mobile obj){
+        System.out.println("in static method");
+//        we can use static variable inside a static method but we can not use non-static variables inside
+//                a static method to do that we need to pass obj
+        System.out.println(obj.brand + " " + obj.price + " " + name);
 
     }
 }
@@ -31,18 +38,12 @@ class Mobile {
 public class StaticMethods {
     public static void main(String[] args) throws ClassNotFoundException {
 
-//        Mobile obj1 = new Mobile();
-//        obj1.brand = "Apple";
-//        obj1.price = 100000;
-//        obj1.show();
-//
-//        Mobile obj2 = new Mobile();
-//
-//        when object is not created class is also not loaded
-//        so to load the class without creating an object. Can be done
-//        for name, it will not create object it will instantiate it.
-        Class.forName("Mobile");
+//        we can't make static reference to non-static method show
+//        we need object to call show
+//         Mobile.show();
 
-
+//        but we can call show1 using class name
+        Mobile obj= new Mobile();
+        Mobile.show1(obj);
     }
 }
