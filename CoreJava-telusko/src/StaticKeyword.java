@@ -3,7 +3,7 @@ class Mobile {
     String brand;
     int price;
 
-    //This is shared by all the objects
+    //static is shared by all the objects
     // Any change in name value will affect
     // all the objects, it is a class member not object member.
     static String name;
