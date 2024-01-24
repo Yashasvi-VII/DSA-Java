@@ -29,21 +29,20 @@ class Mobile {
 }
 
 public class StaticMethods {
-    public static void main(String[] args) {
-        // Creation of object is two step process
-        // class loads and objects get instantiated
-        //class loads only once, so static block
-        // will be called only once.
-        // in jvm there is area class loader, class will be loaded to
-        //class library to class loader and it will happen only once.And every time
-        // class loads it will call static block. so that's why constructor is called
-        // after the static block
-        Mobile obj1 = new Mobile();
-        obj1.brand = "Apple";
-        obj1.price = 100000;
-        obj1.show();
+    public static void main(String[] args) throws ClassNotFoundException {
 
-        Mobile obj2 = new Mobile();
+//        Mobile obj1 = new Mobile();
+//        obj1.brand = "Apple";
+//        obj1.price = 100000;
+//        obj1.show();
+//
+//        Mobile obj2 = new Mobile();
+//
+//        when object is not created class is also not loaded
+//        so to load the class without creating an object. Can be done
+//        for name, it will not create object it will instantiate it.
+        Class.forName("Mobile");
+
 
     }
 }
