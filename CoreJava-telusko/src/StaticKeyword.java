@@ -9,6 +9,7 @@ class Mobile {
     static String name;
 
     public void show(){
+        // we can use static variable name in non-static methods
         System.out.println(brand+" "+ price+" " + name);
 
     }
