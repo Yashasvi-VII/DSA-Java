@@ -19,6 +19,7 @@ class Human {
 
     //Setter method to set age
     public void setAge(int age){
+        //this refers to current object who is calling the set age
         this.age=age;
     }
 
