@@ -26,8 +26,9 @@ class B extends A {
     }
 
     public B(int n) {
-        // To call parametrized constructor of A, simply pass variable in super
-        super(n);
+        // This will call the super of B, i.e. this will execute constructor of same
+        // class
+        this();
         System.out.println("in B int");
     }
 }
