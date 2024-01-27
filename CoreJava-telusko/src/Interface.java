@@ -22,23 +22,23 @@ Whenever we do interface to interface we say extends.
 
 interface demoInterface {
 
-    int age=44;
-    String area="india";
+    int age = 44;
+    String area = "india";
 
     void show();
 
     void config();
 }
 
-interface temp{
+interface temp {
     void run();
 }
 
-interface temp2 extends temp{
+interface temp2 extends temp {
     void run();
 }
 
-class demoClass implements demoInterface,temp {
+class demoClass implements demoInterface, temp {
     public void show() {
         System.out.println("in Show");
     }
@@ -47,7 +47,7 @@ class demoClass implements demoInterface,temp {
         System.out.println("in config");
     }
 
-    public void run(){
+    public void run() {
         System.out.println("is running");
     }
 }
