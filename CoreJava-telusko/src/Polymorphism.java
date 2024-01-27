@@ -6,6 +6,9 @@ when the behaviour will be defined in compile time or run time.
 Overloading is part of compile time, overRiding is part of run time.
 
 Below is demo code for dynamic method dispatch
+
+Note:- irrespective of what type of variable you create but all depends upon
+what object you have. And that's only possible when you have inheritance
  */
 
 class D {
@@ -15,27 +18,23 @@ class D {
 }
 
 class E extends D {
-
+public void show(){
+    System.out.println("in B show");
+}
 }
 
-class Computer{
-
-}
-
-class Laptop extends Computer{
-
-}
 
 public class Polymorphism {
     public static void main(String[] args) {
 
         // Creating reference of a super class and object of the subclass
-
-        D obj = new E();
+        D obj = new D();
         obj.show();
 
-        Laptop obj1=new Laptop();
-        // We can have object of type parent and object can be of child
-        Computer obj2=new Laptop();
+        // we can assign object to old variable.
+        obj = new E();
+        //Polymorphism
+        obj.show();
+
     }
 }
