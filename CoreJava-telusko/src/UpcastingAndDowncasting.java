@@ -17,5 +17,13 @@ public class UpcastingAndDowncasting {
         //upcasting subclass to parent class
         UpcastingDemo1 obj1= (UpcastingDemo1) new UpcastingDemo2();
         obj1.show1();
+
+        //We need down casting because even if object is of upcasting demo2
+        //we cannot call show2 method
+        // obj1.show2();
+
+        //Down casting
+        UpcastingDemo2 obj2 = (UpcastingDemo2) obj1;
+        obj2.show2();
     }
 }
