@@ -9,21 +9,31 @@ is a generic machine  it can be laptop or desktop.
 so we can improve it by making a computer class and rest all class extends computer class.
 */
 
-class Computer {
+//abstract class Computer {
+//
+//    // we are not doing anything so instead of defining it, just declare it.
+////    public void code() {
+////
+////    }
+//
+//    public abstract void code();
+//}
 
-    public void code() {
+// Instead of abstract class we can use interface.
 
-    }
+interface Computer
+{
+    void code();
 }
 
-class Laptop extends Computer {
+class Laptop implements Computer {
 
     public void code() {
         System.out.println("code, compile, run");
     }
 }
 
-class Desktop extends Computer {
+class Desktop implements Computer {
     public void code() {
         System.out.println("code, compile, run: faster");
     }
@@ -44,6 +54,7 @@ public class NeedForInterfaces {
         // Laptop lap = new Laptop();
        // Desktop desk = new Desktop();
 
+        //Now this is interface reference not class reference.
         Computer lap = new Laptop();
         Computer desk = new Desktop();
 
