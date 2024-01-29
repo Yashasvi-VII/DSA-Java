@@ -8,19 +8,29 @@ access to out object we can call the println.
 
 Buffer Reader is class that works with IO and is inside package.io(which needs to be explicitly import).We need to pass
 object of the buffer reader
+
+We can also use scanner class in java (Introduced in java 1.5), scanner takes the system.in and we get lot of methods.
 */
 
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.util.Scanner;
 
 public class UserInput   {
     public static void main(String[] args) throws IOException {
 
-        InputStreamReader in = new InputStreamReader(System.in);
-        BufferedReader bf = new BufferedReader(in);
+//        InputStreamReader in = new InputStreamReader(System.in);
+//        BufferedReader bf = new BufferedReader(in);
+//
+//        int num = Integer.parseInt(bf.readLine());
+        Scanner sc = new Scanner(System.in);
 
-        int num = Integer.parseInt(bf.readLine());
+        int num=sc.nextInt();
+
         System.out.println(num);
+
+        // we have to close the buffer reader 'A good practice'
+      //  bf.close();
     }
 }
